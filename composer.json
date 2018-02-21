@@ -1,0 +1,12 @@
+{
+    "name": "sushantrao/auto-remind",
+    "require": {
+        "twilio/sdk": "^5.16"
+    },
+    "authors": [
+        {
+            "name": "sushant10",
+            "email": "sushdude34@gmail.com"
+        }
+    ]
+}
