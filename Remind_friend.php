@@ -1,6 +1,6 @@
 <?php 
 # remind friend to take her pills   
-// Get the PHP helper library from https://twilio.com/docs/libraries/php
+
 require_once "vendor/autoload.php";// Loads the library
 use Twilio\Rest\Client;
 
@@ -12,6 +12,8 @@ $client = new Client($sid, $token);
 
 $my_number = getenv('my_num');
 $her_number = getenv('her_num'); 
+
+# add functionality to message different things at different times
 
 $client->messages->create(
     $her_number,
