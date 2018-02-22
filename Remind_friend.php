@@ -11,9 +11,9 @@ $token = getenv('TWILIO_AUTH_TOKEN');
 $client = new Client($sid, $token);
 
 $my_number = getenv('my_num');
-$her_number = getenv('her_num'); 
+$her_number = getenv('her_num'; 
 
-# add functionality to message different things at different times
+# TODO // add functionality to message different things at different times
 
 $client->messages->create(
     $her_number,
