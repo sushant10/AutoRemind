@@ -26,18 +26,18 @@ $client = new Client($sid, $token);
 $my_number = getenv('my_num');
 $her_number = getenv('her_num'); 
 $message = "";
-
+$logtime=date('H:i');
 # TODO // add functionality to message different things at different times
 
 $messages = array(
    08 => "Take pill X",
    12 => "Take pill Y",
-   15 => "Take pill Z",
+   14 => "Take pill Z",
 );
 
 #trying out timely messages
 try{
-echo $messages[date("H")];
+echo "Message: {$messages[date("H")]} // Sent at: {$logtime} /n" ;
 }catch(Exception $e){
 	echo "Message not sent, time not correct";
 }
