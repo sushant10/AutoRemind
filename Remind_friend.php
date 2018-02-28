@@ -31,22 +31,23 @@ $logtime=date('H:i');
 
 $messages = array(
    08 => "Take pill X",
-   12 => "Take pill Y",
+   13 => "Take pill Y",
    14 => "Take pill Z",
 );
 
 #trying out timely messages
 try{
 echo "Message: {$messages[date("H")]} // Sent at: {$logtime} /n" ;
-}catch(Exception $e){
-	echo "Message not sent, time not correct";
-}
-/*
 $client->messages->create(
     $her_number,
     array(
         'from' => $my_number,
-        'body' => "Wake up! Take your pills"
+        'body' => "Hey! It's time to take {$messages[date("H")]}"
     )
-);*/  
+);
+}catch(Exception $e){
+	echo "Message not sent, it's not the right time to remind";
+}
+
+
 ?>
